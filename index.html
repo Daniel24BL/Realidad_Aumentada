@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Realidad Aumentada </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+body{
+  text-align: center;
+  background-color: #a3f798;
+}
+
+.button {
+  background-color: #2db1e6; 
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 2px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 0px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.button:hover {
+box-shadow: 0 15px 16px 0 rgb(10, 250, 178),0 17px 50px 0 rgba(0, 0, 0, 0.16);
+}
+
+.segundo{
+ text-align: center;
+}
+
+</style>
+
+    <script>
+      function addScene() {
+        var scene = document.createElement("iframe")
+        scene.setAttribute("src", "/AR.html")
+        scene.setAttribute("width", "900")
+        scene.setAttribute("height", "480")
+        scene.setAttribute("align", "center")
+        scene.setAttribute("style", "")
+        document.querySelector("body").appendChild(scene)
+       
+        var contador = 1;
+        document.getElementById('button').onclick = function() {
+        alert("No es necesario presionar mas de una vez el boton");
+        };
+      }
+      </script>
+
+  <body>
+    <h1>REALIDAD AUMENTADA</h1>
+    <h3>Elaborado por: Daniel Baque </h3>
+    <div class="segundo">
+      <button class="button" id="button" onclick="addScene()">
+      <p> Probar la AR</p>
+      </button>
+      </div>
+
+  </body>
+</html>
+
